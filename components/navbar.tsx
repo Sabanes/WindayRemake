@@ -35,22 +35,34 @@ export function Navbar() {
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false)
   const [mobileProductsDropdownOpen, setMobileProductsDropdownOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [visible, setVisible] = useState(true)
+  const lastScrollY = useRef(0)
 
   // Add smooth scroll behavior to the document
   useEffect(() => {
-    // Set smooth scroll behavior for the entire document
     document.documentElement.style.scrollBehavior = "smooth"
-
     return () => {
-      // Clean up when component unmounts
       document.documentElement.style.scrollBehavior = ""
     }
   }, [])
 
-  // Handle scroll event to change navbar appearance
+  // Handle scroll event to change navbar appearance and visibility
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      const currentScrollY = window.scrollY
+      
+      // Determine if navbar should be visible based on scroll direction
+      if (currentScrollY > lastScrollY.current + 10) {
+        setVisible(false) // Hide when scrolling down
+      } else if (currentScrollY < lastScrollY.current - 10) {
+        setVisible(true) // Show when scrolling up
+      }
+      
+      // Update background color based on scroll position
+      setScrolled(currentScrollY > 50)
+      
+      // Update the last scroll position
+      lastScrollY.current = currentScrollY
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -106,15 +118,17 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 ${
+      className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled ? "bg-[#d3d3d3]/95" : "bg-[#d3d3d3]/90"
-      } backdrop-blur-sm border-b border-[#493F0B]/10 transition-all duration-300`}
+      } backdrop-blur-sm border-b border-[#493F0B]/10 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
     >
-      <div className="container mx-auto py-3">
+      <div className="container mx-auto">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="relative">
-            <div className="w-[140px] h-[50px] relative mt-2">
+            <div className="w-[160px] h-[70px] relative mt-2">
               <Image
                 src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/n1inal9dy8b5nxlxpydr"
                 alt="WINDAYPVC Logo"
@@ -124,16 +138,16 @@ export function Navbar() {
             </div>
           </Link>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - MODIFIED: smaller size */}
           <div className="lg:hidden">
             <Button
               variant="ghost"
               size="icon"
-              className="text-[#493F0B] hover:bg-[#493F0B]/10 rounded-full transition-colors"
+              className="text-[#493F0B] hover:bg-[#493F0B]/10 rounded-full transition-colors "
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             >
-              {mobileMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+              {mobileMenuOpen ? <X  /> : <Menu className="!h-[25px] !w-[25px]" />}
             </Button>
           </div>
 
@@ -284,7 +298,7 @@ export function Navbar() {
             {/* CTA Button */}
             <div className="pt-2">
               <Link href="/contacto" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-[#493F0B] text-white hover:bg-[#493F0B]/90 py-6">Pedir Orçamento</Button>
+                <Button className="w-full bg-[#493F0B] text-white hover:bg-[#493F0B]/90 py-5">Pedir Orçamento</Button>
               </Link>
             </div>
           </nav>

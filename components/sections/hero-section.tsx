@@ -26,16 +26,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             {/* Add logo here */}
-            <div className="mb-6">
-              <div className="relative w-[220px] h-[70px] bg-white/10 backdrop-blur-sm p-3 rounded-lg mt-2">
-                <Image
-                  src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/n1inal9dy8b5nxlxpydr"
-                  alt="WINDAYPVC Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
+
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Janelas e Portas PVC <span className="text-[#d3d3d3]">de Alta Qualidade</span>
