@@ -86,7 +86,7 @@ export function ProductsSection() {
             id="vedaluz"
             title="Vedaluz"
             description="Sistemas de vedação que garantem o máximo de eficiência energética e conforto."
-            imageSrc="/placeholder.svg?height=400&width=600"
+            imageSrc="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Winday/kp7boapk5e7cu4wewirm"
             imageAlt="Sistemas Vedaluz"
             pageUrl="/produtos/vedaluz"
           />

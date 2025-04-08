@@ -11,7 +11,7 @@ export default function VedaluzPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1600"
+            src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Winday/kp7boapk5e7cu4wewirm"
             alt="Sistemas Vedaluz"
             fill
             className="object-cover"
@@ -83,8 +83,93 @@ export default function VedaluzPage() {
         </div>
       </section>
 
-      {/* Technology Section */}
+      {/* Panel Types Section */}
       <section className="py-16">
+        <div className="container mx-auto max-w-7xl px-6">
+          <h2 className="text-3xl font-bold text-[#493F0B] mb-4 text-center">Tipos de Painéis</h2>
+          <p className="text-[#493F0B]/80 text-center max-w-3xl mx-auto mb-12">
+            Oferecemos dois tipos de painéis Vedaluz para atender às suas necessidades específicas de estilo e
+            funcionalidade.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Painel Liso */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div className="relative h-64">
+                <Image
+                  src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Winday/fdduw02ddtu9qcrpbemk"
+                  alt="Painel Liso"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#493F0B] mb-3">Painel Liso</h3>
+                <p className="text-[#493F0B]/80 mb-4">
+                  Design minimalista e contemporâneo com superfície lisa e uniforme, ideal para ambientes modernos e
+                  espaços que buscam uma estética clean e sofisticada.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#493F0B] mr-2 mt-0.5" />
+                    <span className="text-[#493F0B]/80">Acabamento elegante e uniforme</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#493F0B] mr-2 mt-0.5" />
+                    <span className="text-[#493F0B]/80">Fácil limpeza e manutenção</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#493F0B] mr-2 mt-0.5" />
+                    <span className="text-[#493F0B]/80">Ideal para ambientes contemporâneos</span>
+                  </li>
+                </ul>
+                <Link href="/contacto">
+                  <Button className="w-full bg-[#493F0B] hover:bg-[#493F0B]/90 text-white">Mais Informações</Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Painel Táboa */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div className="relative h-64">
+                <Image
+                  src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Winday/kp7boapk5e7cu4wewirm"
+                  alt="Painel Táboa"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#493F0B] mb-3">Painel Táboa</h3>
+                <p className="text-[#493F0B]/80 mb-4">
+                  Inspirado na textura natural da madeira, oferece um visual rústico e acolhedor, perfeito para projetos
+                  que buscam combinar eficiência com o charme tradicional.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#493F0B] mr-2 mt-0.5" />
+                    <span className="text-[#493F0B]/80">Textura que imita madeira natural</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#493F0B] mr-2 mt-0.5" />
+                    <span className="text-[#493F0B]/80">Maior resistência a riscos e impactos</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#493F0B] mr-2 mt-0.5" />
+                    <span className="text-[#493F0B]/80">Perfeito para ambientes rústicos e tradicionais</span>
+                  </li>
+                </ul>
+                <Link href="/contacto">
+                  <Button className="w-full bg-[#493F0B] hover:bg-[#493F0B]/90 text-white">Mais Informações</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -151,7 +236,7 @@ export default function VedaluzPage() {
 
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=800&width=1000"
+                src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Winday/fdduw02ddtu9qcrpbemk"
                 alt="Tecnologia Vedaluz"
                 fill
                 className="object-cover rounded-lg"
