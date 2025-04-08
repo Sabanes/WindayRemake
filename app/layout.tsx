@@ -14,7 +14,7 @@ export const metadata = {
     template: "%s | WINDAYPVC",
   },
   description:
-    "Janelas e portas em PVC e alumínio duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.",
+    "Janelas e portas em PVC duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.",
   keywords: [
     "janelas pvc",
     "portas pvc",
@@ -44,7 +44,7 @@ export const metadata = {
   openGraph: {
     title: "WINDAYPVC - Janelas e Portas PVC de Alta Qualidade",
     description:
-      "Janelas e portas em PVC e alumínio duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.",
+      "Janelas e portas em PVC duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.",
     url: "https://windaypvc.pt",
     siteName: "WINDAYPVC",
     images: [
@@ -62,7 +62,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "WINDAYPVC - Janelas e Portas PVC de Alta Qualidade",
     description:
-      "Janelas e portas em PVC e alumínio duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.",
+      "Janelas e portas em PVC duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.",
     images: ["/winday.jpg"],
     creator: "@windaypvc",
   },
@@ -99,7 +99,6 @@ export const metadata = {
       },
     ],
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -142,7 +141,7 @@ export default function RootLayout({
               },
               email: "geralwinday@gmail.com",
               description:
-                "Janelas e portas em PVC e alumínio duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.",
+                "Janelas e portas em PVC duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.",
             }),
           }}
         />
@@ -150,6 +149,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'
